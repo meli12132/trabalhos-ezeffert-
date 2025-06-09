@@ -20,3 +20,14 @@ export default function App() {
     </ProductProvider>
   );
 }
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ShopPage from "./pages/ShopPage";
+import CreateProductPage from "./pages/CreateProductPage";
+
+<Router>
+  <Routes>
+    <Route path="/" element={<ShopPage />} />
+    <Route path="/criar" element={<CreateProductPage />} />
+    {/* futura tela de edição */}
+  </Routes>
+</Router>

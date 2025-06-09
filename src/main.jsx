@@ -1,11 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css'; // global CSS
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import ShopPage from "./pages/ShopPage";
+import CreateProductPage from "./pages/CreateProductPage";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<ShopPage />} />
+      <Route path="/criar" element={<CreateProductPage />} />
+      <Route path="/editar" element={<EditProductPage />} /> {/* Se necessário */}
+    </Routes>
+  );
+}

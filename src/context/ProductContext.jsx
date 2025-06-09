@@ -30,3 +30,8 @@ export function ProductProvider({ children }) {
 export function useProducts() {
   return useContext(ProductContext);
 }
+async function createProduct(newProduct) {
+  
+  await api.post("/produtos", newProduct); 
+  fetchProducts(); 
+}
